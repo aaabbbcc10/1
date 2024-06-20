@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+<title>跳转中··</title>
+<style>
+.btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="btn" onclick="redirect()">继续访问</button>
+
+<script>
+// Function to redirect to a new URL
+function redirect() {
+  // Get the value of the 'id' parameter from the current URL
+  var urlParams = new URLSearchParams(window.location.search);
+  var id = urlParams.get('id');
+  
+  // If the 'id' parameter exists, redirect to a new URL with the 'id' parameter included
+  if(id) {
+    var redirectTo = id; // Replace 'https://www.example.com?id=' with your desired redirect URL
+    window.location.href = redirectTo;
+  } else {
+    alert('ID parameter not found in URL.');
+  }
+}
+</script>
+
+</body>
+</html>
+
